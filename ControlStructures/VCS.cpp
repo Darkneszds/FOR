@@ -1,16 +1,16 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <conio.h>
 using namespace std;
 
 int main() 
 {
     int decimalNumber;
-    char hexNumber[20]; // Массив для хранения шестнадцатеричного числа
+    char hexNumber[20]; // РњР°СЃСЃРёРІ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ С€РµСЃС‚РЅР°РґС†Р°С‚РµСЂРёС‡РЅРѕРіРѕ С‡РёСЃР»Р°
     int index = 0;
     int remainder;
 
     setlocale(LC_ALL, "");
-    cout << "Введите десятичное число: "; cin >> decimalNumber;
+    cout << "Р’РІРµРґРёС‚Рµ РґРµСЃСЏС‚РёС‡РЅРѕРµ С‡РёСЃР»Рѕ: "; cin >> decimalNumber;
     char key;
 
     do 
@@ -61,7 +61,7 @@ int main()
         hexNumber[index - 1 - i] = temp;
     }
    
-    cout << "Шестнадцатеричное представление: ";
+    cout << "РЁРµСЃС‚РЅР°РґС†Р°С‚РµСЂРёС‡РЅРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ: ";
     for (int i = 0; i < index; ++i) 
     {
         cout << hexNumber[i];
