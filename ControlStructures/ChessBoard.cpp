@@ -1,32 +1,29 @@
-﻿//#include <iostream>
-//using namespace std;
-//
-//void main()
-//{
-//	setlocale(LC_ALL, "");
-//	int n; 
-//	cout << "Введите размер доски: "; cin >> n;
-//	if (n <= 0)
-//	{
-//		cout << "Размер доски должен быть положительным" << endl;
-//	}
-//	else
-//	{
-//	for (int i = 0; i < n; ++i) 
-//	{
-//		for (int j = 0; j <= n; ++j) 
-//		{
-//				
-//			if ((i + j) % 2 == 0)
-//			{
-//				cout << "+ ";
-//			}
-//			else 
-//			{
-//				cout << "- "; 
-//			}
-//		}
-//		cout << endl; 
-//	}
-//	}
-//}
+﻿#include <iostream>
+#include<Windows.h>
+using namespace std;
+
+void main()
+{
+	setlocale(LC_ALL, "");
+	const int n = 10;
+	int arr[n] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+	int number_of_shifts;
+	cout << "Введите количество сдвигов: "; cin >> number_of_shifts;
+	
+	for (int i = 0; i < number_of_shifts; i++)
+	{
+		Sleep(500);
+		system("CLS");
+		int buffer = arr[0];
+		for (int i = 1; i < n; i++)
+		{
+			arr[i - 1] = arr[1];
+		}
+		arr[n - 1] = buffer;
+	}
+	for (int i = 0; i < n; i++)
+	{
+		cout << arr[i] << "\t";
+	}
+	cout << endl;
+}

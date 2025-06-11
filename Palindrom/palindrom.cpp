@@ -4,24 +4,28 @@ using namespace std;
 void main()
 {
 	setlocale(LC_ALL, "");
-	int number; //число пользовател€
-	int reverse = 0; //исходное число записанное наоборот
-	cout << "¬ведите число: "; cin >> number;
-	int buffer = number; // создание копии исходного числа
-	while (buffer)
+	const int n = 10;
+	int arr[n];
+	for (int i = 0; i < n; i++)
 	{
-		reverse *= 10; //освобождаем место под следующей разр€д
-		reverse += buffer % 10; //добавл€ем младший разр€д к обратной записи числа
-		buffer /= 10; //убираем младший разр€д из пр€мой записи числа
+		bool unique;
+		do
+		{
+			arr[i] = rand() % 10;
+			unique = true;
+			for (int j = 0; j < i; j++)
+			{
+				if (arr[i] == arr[j])
+				{
+					unique = false;
+					break;
+				}
+			}
+		} while (!unique);
 	}
-	cout << number << endl;
-	cout << reverse << endl;
-	if (reverse == number)
+	for (int i = 0; i < n; i++)
 	{
-		cout << "ѕалиндром" << endl;
+		cout << arr[i] << "\t";
 	}
-	else
-	{
-		cout << "Ќе палиндром" << endl;
-	}
+	cout << endl;
 }
