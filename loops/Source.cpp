@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 using namespace std;
 
 void main()
@@ -20,6 +20,6 @@ void main()
 		if (arr[i] < min)min = arr[i];
 		if (arr[i] > max)max = arr[i];
 	}
-	cout << "Минимально значение: " << min << endl;
-	cout << "Максимальное значение: " << max << endl;
+	cout << "РњРёРЅРёРјР°Р»СЊРЅРѕ Р·РЅР°С‡РµРЅРёРµ: " << min << endl;
+	cout << "РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ: " << max << endl;
 }

@@ -12,12 +12,10 @@ void main()
 	
 	for (int i = 0; i < number_of_shifts; i++)
 	{
-		Sleep(500);
-		system("CLS");
 		int buffer = arr[0];
 		for (int i = 1; i < n; i++)
 		{
-			arr[i - 1] = arr[1];
+			arr[i - 1] = arr[i];
 		}
 		arr[n - 1] = buffer;
 	}

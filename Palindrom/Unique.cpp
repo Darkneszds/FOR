@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream> //Случайные уникальные числа
 using namespace std;
 
 void main()
